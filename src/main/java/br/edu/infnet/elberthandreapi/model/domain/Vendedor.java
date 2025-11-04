@@ -6,7 +6,14 @@ public class Vendedor {
 	public double salario; // valor padrão é 0.0
 	public int qtdeVendas; // valor padrão é 0
 	
-	private double calcularBonus() {
+	
+	public Vendedor() {
+		nome = "Vendedor Temporário";
+		salario = 1;
+		qtdeVendas = 1;
+	}
+	
+	public double calcularBonus() {
 		// Requisitos funcionais: Bônus extra de R$ 200,00 ao salario 
 		// se ele tiver feito mais de 8 vendas e se o seu salário base for menor que R$ 2000,00
 		
@@ -17,7 +24,7 @@ public class Vendedor {
 	}
 	
 	
-	private double calcularComissao() { // somente a própria classe pode acessar esse método
+	public double calcularComissao() { 
 		
 		// um método só pode fazer uma única coisa.
 		
@@ -43,7 +50,7 @@ public class Vendedor {
 		
 	}
 	
-	private double calcularSalario() {
+	public double calcularSalario() {
 		
 		double comissao = calcularComissao();
 		

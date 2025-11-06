@@ -2,9 +2,9 @@ package br.edu.infnet.elberthandreapi.model.domain;
 
 public class Vendedor {
 
-	public String nome; // valor padrão é null
-	public double salario; // valor padrão é 0.0
-	public int qtdeVendas; // valor padrão é 0
+	private String nome; // valor padrão é null
+	private double salario; // valor padrão é 0.0
+	private int qtdeVendas; // valor padrão é 0
 	
 	
 	public Vendedor() {
@@ -17,7 +17,7 @@ public class Vendedor {
 		// Requisitos funcionais: Bônus extra de R$ 200,00 ao salario 
 		// se ele tiver feito mais de 8 vendas e se o seu salário base for menor que R$ 2000,00
 		
-		if(qtdeVendas > 8 && salario < 2000) {
+		if(getQtdeVendas() > 8 && getSalario() < 2000) {
 			return 200;
 		}
 		return 0;
@@ -102,14 +102,34 @@ public class Vendedor {
 		
 		System.out.println("Valor Total = " + salarioLiquido);	
 		
-		System.out.println("O "+ categoria + " " + nome + " foi cadastrado com sucesso!!" );
+		System.out.println("O "+ categoria + " " + getNome() + " foi cadastrado com sucesso!!" );
 		
 	}
-	
 
-	
-	
+	public String getNome() {
+		return nome;
+	}
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
+	public int getQtdeVendas() {
+		return qtdeVendas;
+	}
+
+	public void setQtdeVendas(int qtdeVendas) {
+		this.qtdeVendas = qtdeVendas;
+	}	
+	
 	
 	
 }

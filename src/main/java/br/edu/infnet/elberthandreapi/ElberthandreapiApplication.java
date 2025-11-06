@@ -33,7 +33,7 @@ public class ElberthandreapiApplication {
 				Vendedor vendedor = new Vendedor();	
 				
 				System.out.print("Digite o nome do vendedor: ");
-				vendedor.nome = in.nextLine();  //"Elberth";	
+				vendedor.setNome(in.nextLine());  //"Elberth";	
 				
 				System.out.print("Informe o salário do vendedor: ");
 				if(!in.hasNextDouble()) { // validação de entrada, se o usuário digitar um valor inválido - método boolean
@@ -50,7 +50,7 @@ public class ElberthandreapiApplication {
 						System.out.println("O salário não pode ser menor que zero!!");
 						// como o valor padrão de double é 0.0, não preciso atribuir nada e o salário já ficará com esse valor
 					} else {
-						vendedor.salario = salario;
+						vendedor.setSalario(salario);
 					}
 				}
 				
@@ -79,7 +79,7 @@ public class ElberthandreapiApplication {
 							// como o valor padrão de int é 0, não preciso atribuir nada e a qtdeVendas já ficará com esse valor
 							
 						} else {
-							vendedor.qtdeVendas = qtdeVendas;
+							vendedor.setQtdeVendas(qtdeVendas);
 							
 							if (qtdeVendas == 0) {
 								System.out.println("Esse vendedor não teve vendas neste período e não receberá comissão extra!!");
@@ -142,8 +142,6 @@ public class ElberthandreapiApplication {
 		} while (opcao != 9);
 		
 
-		
-		
 		
 		
 	
